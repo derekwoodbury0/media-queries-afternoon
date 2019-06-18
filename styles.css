@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 50px;
+    width: 100%;
+}
+
+.nav-bar-left {
+    color: #fec503;
+}
+
+header {
+    background-image: url(https://blackrockdigital.github.io/startbootstrap-agency/img/header-bg.jpg);
+    height: auto;
+    width: auto;
+    background-size: cover;
+}
+
+#toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 15px;
+    line-height: 30px;
+    width: 65px;
+    float: right;
+    background: #fec503;
+    text-align: center;
+    border-radius: .25rem;
+}
+
+.menu-links {
+    width: 450px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 300px;
+}
+
+.menu-links a {
+    text-decoration: none;
+    color: white;
+}
+
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.intro-text {
+    padding-bottom: 200px;
+    padding-top: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.welcome-text {
+    font-size: 40px;
+    font-style: italic;
+    line-height: 40px;
+    margin-bottom: 25px;
+}
+
+.greeting-text {
+    font-size: 75px;
+    font-weight: 700;
+    line-height: 75px;
+    margin-bottom: 50px;
+}
+
+.more-button {
+    text-decoration: none;
+    background-color: #fed136;
+    color: white;
+    font-size: 18px;
+    padding: 20px 40px;
+    border-radius: .25rem;
+}
+
+@media (max-width: 800px) {
+    nav {
+        background: #212529;
+        height: 50px;
+        justify-content: space-between;
+        padding: 0 15px;
+    }
+
+    .menu-links {
+        display: none;
+        width: 100vw;
+        z-index: 10;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        background: #212529;
+        margin-left: 0;
+        line-height: 50px;
+        animation: dropdown 2s;
+    }
+
+    header {
+        height: 75vh;
+        width: auto;
+        background-size: cover;
+    }
+
+    .menu-links a {
+        border: 1px white;
+        margin-left: 5%;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    #toggle:checked + .menu-links {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+    }
+
+    .welcome-text {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .greeting-text {
+        font-size: 50px;
+        text-align: center;
+    }
+}
